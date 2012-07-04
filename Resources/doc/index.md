@@ -71,7 +71,7 @@ public function registerBundles()
 
 <a name="first-builder"></a>
 
-### Your first breadcrumbs builder
+## Your first breadcrumbs builder
 
 ```php
 <?php
@@ -102,5 +102,7 @@ class DemoBreadcrumbsBuilder extends AbstractBuilder
 ```
 
 <a name="rendering-breadcrumbs"></a>
+
+## Rendering breadcrumbs
 
     {{ la_fourchette_breacrumbs_render() }}
