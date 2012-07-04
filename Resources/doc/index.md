@@ -67,3 +67,40 @@ public function registerBundles()
     // ...
 }
 ```
+
+
+<a name="first-builder"></a>
+
+### Your first breadcrumbs builder
+
+```php
+<?php
+// src/LaFourchette/DemoBundle/Breadcrumbs/DemoBreadcrumbsBuilder.php
+
+namespace LaFourchette\DemoBundle\Breadcrumbs;
+
+use LaFourchette\BreadcrumbsBundle\Breadcrumbs\Builder\AbstractBuilder;
+
+class DemoBreadcrumbsBuilder extends AbstractBuilder
+{
+    public function buildHomepage()
+    {
+        $t = $this->createTrail();
+        $t->add($this->createCrumb('Homepage', $this->container->get('router')->generate('homepage')));
+        
+        return $t;
+    }
+
+    public function registerTrails()
+    {
+        return array(
+            'homepage'                  => array($this, 'buildHomepage'),
+        );
+    }
+}
+
+```
+
+<a name="rendering-breadcrumbs"></a>
+
+    {{ la_fourchette_breacrumbs_render() }}
