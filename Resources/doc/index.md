@@ -5,7 +5,7 @@ Using LaFourchetteBreadcrumbsBundle
 
 * [Installation](#installation)
 * [Your first breadcrumb](#first-breadcrumb)
-* [Rendering Menus](#rendering-breadcrumbs)
+* [Rendering breadcrumbs](#rendering-breadcrumbs)
 
 <a name="installation"></a>
 
