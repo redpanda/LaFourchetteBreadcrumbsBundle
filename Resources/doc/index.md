@@ -73,6 +73,8 @@ public function registerBundles()
 
 ## Your first breadcrumbs builder
 
+### Create the builder class
+
 ```php
 <?php
 // src/LaFourchette/DemoBundle/Breadcrumbs/DemoBreadcrumbsBuilder.php
@@ -100,6 +102,21 @@ class DemoBreadcrumbsBuilder extends AbstractBuilder
 }
 
 ```
+
+### Define the builder class as service
+
+    <parameters>
+        <parameter key="la_fourchette_demo.breadcrumbs_builder.class">LaFourchette\DemoBundle\Breadcrumbs\DemoBreadcrumbsBuilder</parameter>
+    </parameters>
+
+    <services>
+        <service id="la_fourchette_demo.breadcrumbs_builder" class="%la_fourchette_demo.breadcrumbs_builder.class%">
+            <call method="setContainer">
+                <argument type="service" id="service_container" />
+            </call>
+            <tag name="la_fourchette_breadcrumbs.builder" />
+        </service>
+    </services>
 
 <a name="rendering-breadcrumbs"></a>
 
