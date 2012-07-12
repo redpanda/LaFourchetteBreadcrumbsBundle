@@ -35,6 +35,19 @@ Run the following commands to bring in the needed libraries as submodules.
 git submodule add https://github.com/lafourchette/LaFourchetteBreadcrumbsBundle.git vendor/bundles/LaFourchette/BreadcrumbsBundle
 ```
 
+#### Method c) Using the `composer` file
+
+Add the following lines to your  `composer.json` file and then run `php composer.phar
+update`:
+
+```
+require:
+    ...
+    "lafourchette/breadcrumbs-bundle": "dev-master",
+    ...
+```
+
+
 ### Step 2) Register the namespaces
 
 Add the following two namespace entries to the `registerNamespaces` call
@@ -96,7 +109,7 @@ class DemoBreadcrumbsBuilder extends AbstractBuilder
     public function registerTrails()
     {
         return array(
-            'homepage'                  => array($this, 'buildHomepage'),
+            'homepage' => array($this, 'buildHomepage'),
         );
     }
 }
