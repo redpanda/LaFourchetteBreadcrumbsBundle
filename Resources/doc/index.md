@@ -41,9 +41,19 @@ Add the following lines to your  `composer.json` file and then run `php composer
 update`:
 
 ```
-require:
     ...
-    "lafourchette/breadcrumbs-bundle": "dev-master",
+    "repositories": [
+            {
+                "type": "vcs",
+                "url": "ssh://git@github.com/lafourchette/LaFourchetteBreadcrumbsBundle.git"
+            }
+        ],
+    require:
+        {
+        ...
+        "lafourchette/breadcrumbs-bundle": "dev-master",
+        ...
+        }
     ...
 ```
 
