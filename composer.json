@@ -1,12 +1,19 @@
 {
     "name": "lafourchette/breadcrumbs-bundle",
+    "type": "bundle",
     "description": "A simple breadcrumbs bundle",
-    "autoload": {
-        "psr-0": { "": "src/" }
-    },
+    "keywords": ["bredcrumb","symfony"],
+    "license": "MIT",
+    "authors": [
+    {
+            "name": "LaFourchettte",
+            "email": "",
+            "homepage": "http://lafourchette.github.com",
+            "role": "developer"
+    }
+    ],
     "require": {
-        "php": ">=5.3.3",
-        "redpanda/breadcrumbs": "dev-master"
+        "php": ">=5.3.3"
     },
     "autoload": {
         "psr-0": { "Lafourchette\\BreadcrumbsBundle": "" }
