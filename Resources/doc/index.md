@@ -42,12 +42,8 @@ update`:
 
 ```
     ...
-    "repositories": [
-            {
-                "type": "vcs",
-                "url": "ssh://git@github.com/lafourchette/LaFourchetteBreadcrumbsBundle.git"
-            }
-        ],
+    "minimum-stability": "dev",
+
     require:
         {
         ...
